@@ -1,54 +1,64 @@
-# tempo_de_desenvolvimento
-Descrição Geral
-Este script Python utiliza a biblioteca tkinter para criar uma interface gráfica para monitorar as horas trabalhadas em diferentes projetos. Ele interage com um banco de dados PostgreSQL para armazenar e recuperar informações sobre os projetos e os registros de tempo. O script também é capaz de calcular a soma total de tempo gasto em um projeto e exportar os dados para um arquivo Excel ou de texto.
+Programa de Monitoramento de Horas Trabalhadas em Projetos
+Descrição
+O programa desenvolvido por Vanderlei Pereira Rodrigues serve para monitorar as horas trabalhadas em diferentes projetos. Utiliza uma interface gráfica criada com a biblioteca tkinter e interage com um banco de dados PostgreSQL para armazenar e recuperar informações sobre os projetos e os registros de tempo. É capaz de calcular a soma total de tempo gasto em um projeto e exportar os dados para um arquivo Excel ou de texto.
 
-Bibliotecas Utilizadas
-tkinter: Usada para criar a interface gráfica do programa.
-psycopg2: Uma biblioteca PostgreSQL que permite a interação com o banco de dados PostgreSQL.
-datetime: Usada para trabalhar com datas e horas.
-pandas: Utilizada para a manipulação de dados, especialmente útil ao exportar dados para um arquivo Excel.
-configparser: Usada para ler um arquivo de configuração que contém as configurações do banco de dados.
-Estrutura do Banco de Dados
-O banco de dados contém duas tabelas:
+Instalação
+Pré-requisitos
+Python 3.x
+PostgreSQL
+Bibliotecas Python: tkinter, psycopg2, datetime, pandas e configparser.
+Instalação das Bibliotecas
+Utilize o seguinte comando para instalar todas as bibliotecas necessárias:
 
-projetos: Mantém informações sobre os projetos. Contém os campos:
+#pip install tkinter psycopg2 datetime pandas configparser
 
-id: um identificador único para cada projeto (chave primária).
-nome: o nome do projeto.
-registros: Mantém informações sobre os registros de tempo para cada projeto. Contém os campos:
-
-id: um identificador único para cada registro (chave primária).
-projeto_id: um identificador que liga o registro a um projeto específico (chave estrangeira).
-data: a data de um registro específico.
-inicio: o tempo de início do registro.
-fim: o tempo de finalização do registro.
-observacao: um campo para notas adicionais sobre o registro.
-Funcionalidades do Programa
+Funcionalidades
 Conexão com o Banco de Dados: Estabelece conexão com o banco de dados e cria as tabelas se não existirem.
+Gerenciamento de Projetos: Possibilita a criação de novos projetos e a seleção ou exclusão de projetos existentes.
+Monitoramento do Tempo de Trabalho: Facilita o início e a parada do monitoramento do tempo de trabalho em um projeto selecionado, registrando o tempo de início e de fim, bem como observações adicionais.
+Cálculo e Exportação de Dados: Calcula o tempo total gasto em um projeto e possibilita a exportação desses dados para um arquivo Excel ou de texto.
+Interface Gráfica: Contém múltiplos componentes, como botões para iniciar/parar o registro de tempo e calcular o tempo total gasto, além de uma lista para selecionar projetos.
+Estrutura do Banco de Dados
+O banco de dados contém duas tabelas principais:
 
-Gerenciamento de Projetos: Permite ao usuário criar novos projetos e selecionar ou excluir projetos existentes.
+projetos: Mantém informações sobre os projetos, com os campos:
 
-Monitoramento do Tempo de Trabalho: Permite ao usuário iniciar e parar o monitoramento do tempo de trabalho em um projeto selecionado, registrando o tempo de início e de fim, além de observações adicionais.
+id: Identificador único para cada projeto (chave primária).
+nome: Nome do projeto.
+registros: Contém informações sobre os registros de tempo para cada projeto, com os campos:
 
-Cálculo e Exportação de Dados: Calcula o tempo total gasto em um projeto e permite a exportação desses dados para um arquivo Excel ou de texto.
-
-Interface Gráfica: A interface gráfica contém vários componentes, incluindo botões para iniciar/parar o registro de tempo, calcular o tempo total gasto, e uma listbox para selecionar projetos.
-
+id: Identificador único para cada registro (chave primária).
+projeto_id: Identificador que liga o registro a um projeto específico (chave estrangeira).
+data: Data de um registro específico.
+inicio: Tempo de início do registro.
+fim: Tempo de finalização do registro.
+observacao: Campo para notas adicionais sobre o registro.
 Funções Principais
-excluir_projeto(): Permite ao usuário excluir um projeto da lista.
+excluir_projeto(): Exclui um projeto da lista.
 atualizar_data_hora(): Atualiza a data e a hora exibidas na interface gráfica a cada segundo.
-selecionar_projeto(): Permite ao usuário selecionar um projeto da lista.
-iniciar_trabalho(): Permite ao usuário iniciar um novo trabalho, criando um novo projeto ou selecionando um existente.
+selecionar_projeto(): Seleciona um projeto da lista.
+iniciar_trabalho(): Inicia um novo trabalho, criando um novo projeto ou selecionando um já existente.
 atualizar_estado_botoes(): Atualiza o estado dos botões na interface gráfica com base nas ações do usuário.
-iniciar(): Inicia o registro de tempo para o projeto selecionado.
-parar(): Para o registro de tempo para o projeto selecionado.
+iniciar(): Começa o registro de tempo para o projeto selecionado.
+parar(): Interrompe o registro de tempo para o projeto selecionado.
 calcular(): Calcula o tempo total gasto no projeto selecionado e oferece a opção de exportar os dados.
-sair(): Permite ao usuário sair do programa, com uma verificação para garantir que não haja uma sessão ativa.
-Pontos Notáveis
-As configurações do banco de dados são lidas de um arquivo bdcron.cfg.
-O script utiliza uma abordagem de conexão de banco de dados resiliente, criando o banco de dados se não existir na primeira execução.
-As funções interagem diretamente com o banco de dados usando consultas SQL através do psycopg2 para realizar operações de CRUD.
-A exportação de dados pode ser feita tanto em formato Excel quanto em texto.
-A interface gráfica possui elementos para melhorar a usabilidade, incluindo mensagens de erro detalhadas e atualizações dinâmicas de elementos da interface com base no estado do programa.
-Desenvolvedor
-O programa foi desenvolvido por Vanderlei Pereira Rodrigues.
+sair(): Encerra o programa, com uma verificação para garantir que não haja uma sessão ativa.
+Uso
+Execute o script Python no seu ambiente de desenvolvimento de preferência. Utilize a interface gráfica para gerenciar projetos e registrar o tempo gasto em cada um deles.
+
+Contribuição
+Sinta-se à vontade para contribuir com o projeto, fazendo fork e submetendo pull requests.
+
+Licença
+Este projeto está sob a licença MIT.
+
+Contato
+Desenvolvedor: Vanderlei Pereira Rodrigues
+
+Email: vanderlei060393@gmail.com
+LinkedIn: https://www.linkedin.com/in/vanderlei-pereira-rodrigues-40546a202
+Suporte
+Se você encontrar algum problema ou tiver alguma sugestão, por favor, abra uma issue no GitHub.
+
+Agradecimentos
+Agradeço por utilizar e contribuir com este projeto!
