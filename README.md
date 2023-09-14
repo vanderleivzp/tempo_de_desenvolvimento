@@ -1,4 +1,5 @@
 Programa de Monitoramento de Horas Trabalhadas em Projetos
+<<<<<<< Updated upstream
 
 O programa desenvolvido por Vanderlei Pereira Rodrigues serve para monitorar as horas trabalhadas em diferentes projetos. Utiliza uma interface gráfica criada com a biblioteca tkinter e interage com um banco de dados PostgreSQL para armazenar e recuperar informações sobre os projetos e os registros de tempo. É capaz de calcular a soma total de tempo gasto em um projeto e exportar os dados para um arquivo Excel ou de texto.
 
@@ -12,6 +13,21 @@ Utilize o seguinte comando para instalar todas as bibliotecas necessárias:
 
 #pip install tkinter psycopg2 datetime pandas configparser
 
+=======
+Descrição
+O programa desenvolvido por Vanderlei Pereira Rodrigues serve para monitorar as horas trabalhadas em diferentes projetos. Utiliza uma interface gráfica criada com a biblioteca tkinter e interage com um banco de dados PostgreSQL para armazenar e recuperar informações sobre os projetos e os registros de tempo. É capaz de calcular a soma total de tempo gasto em um projeto e exportar os dados para um arquivo Excel ou de texto.
+
+Instalação
+Pré-requisitos
+Python 3.x
+PostgreSQL
+Bibliotecas Python: tkinter, psycopg2, datetime, pandas e configparser.
+Instalação das Bibliotecas
+Utilize o seguinte comando para instalar todas as bibliotecas necessárias:
+
+#pip install tkinter psycopg2 datetime pandas configparser
+
+>>>>>>> Stashed changes
 Funcionalidades
 Conexão com o Banco de Dados: Estabelece conexão com o banco de dados e cria as tabelas se não existirem.
 Gerenciamento de Projetos: Possibilita a criação de novos projetos e a seleção ou exclusão de projetos existentes.
@@ -61,4 +77,8 @@ Suporte
 Se você encontrar algum problema ou tiver alguma sugestão, por favor, abra uma issue no GitHub.
 
 Agradecimentos
+<<<<<<< Updated upstream
 Agradeço por utilizar e contribuir com este projeto!
+=======
+Agradeço por utilizar e contribuir com este projeto!
+>>>>>>> Stashed changes
