@@ -1,5 +1,5 @@
 Programa de Monitoramento de Horas Trabalhadas em Projetos
-Descrição
+
 O programa desenvolvido por Vanderlei Pereira Rodrigues serve para monitorar as horas trabalhadas em diferentes projetos. Utiliza uma interface gráfica criada com a biblioteca tkinter e interage com um banco de dados PostgreSQL para armazenar e recuperar informações sobre os projetos e os registros de tempo. É capaz de calcular a soma total de tempo gasto em um projeto e exportar os dados para um arquivo Excel ou de texto.
 
 Instalação
